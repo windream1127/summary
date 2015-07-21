@@ -25,6 +25,7 @@ command alias reveal_start expr (void)[(NSNotificationCenter*)[NSNotificationCen
 
 command alias reveal_stop expr (void)[(NSNotificationCenter*)[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStop" object:nil];
 ```
+* CoreData编译错误：`CoreData: warning: Unable to load class named ~~`解决方法：将文件添加到编译文件
 
 
 
