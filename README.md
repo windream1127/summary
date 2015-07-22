@@ -15,7 +15,7 @@
 	git remote add origin https://github.com/windream1127/xxx.git
 	git push -u origin master
 ```
-* reveal加载方法:命令行输入如下代码，然后在- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 中添加断点，编辑断点 reveal_load_sim
+* reveal加载方法([Reveal：分析iOS UI的利器](http://security.ios-wiki.com/issue-3-4/)):命令行输入如下代码，然后在- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 中添加断点，编辑断点 reveal_load_sim
 ```
 command alias reveal_load_sim expr (void*)dlopen("/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/libReveal.dylib", 0x2);
 
