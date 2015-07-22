@@ -1,6 +1,7 @@
 # 总结
 ##<a name="index"/>目录
 * [2015-07-21](#2015-07-21)
+* [2015-07-22](#2015-07-22)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -27,6 +28,13 @@ command alias reveal_stop expr (void)[(NSNotificationCenter*)[NSNotificationCent
 ```
 * CoreData编译错误：`CoreData: warning: Unable to load class named ~~`解决方法：将文件添加到编译文件
 
-
-
+<a name="2015-07-22"/>
+##2015-7-22
+###sublime 安装插件
+* 第一步，先要启用Sublime Text 2的install package功能。方法如下：在Sublime Text2中View菜单中开启Show Console，在Console命令窗口输入下列代码：
+```
+import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+```
+回车执行脚本，重启Sublime Text2后，使用cmd+shift+p调出Sublime Text2管理器UI，然后在管理器命令行上输入install，找到install Package选项，回车。
+* 第二步，输入需要安装的插件关键字，选择后回车即可
 
