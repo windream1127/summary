@@ -67,5 +67,5 @@ Hello. ${1}
  ```
 执行block方法体的时候也可以转换为强引用之后再使用：
 ```
-MyController* strongSelf = weakSelf; if (!strongSelf) { return; }
+MyController* strongSelf = weakSelf; if (!strongSelf) { return; } 或者 __strong __typeof(weakSelf)strongSelf = weakSelf;
 ```
