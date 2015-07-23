@@ -38,3 +38,21 @@ import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_pac
 回车执行脚本，重启Sublime Text2后，使用cmd+shift+p调出Sublime Text2管理器UI，然后在管理器命令行上输入install，找到install Package选项，回车。
 * 第二步，输入需要安装的插件关键字，选择后回车即可
 
+###sublime 添加代码片段
+tool->New Snippet 会弹出新添加代码片段代码，如下： 保存时后缀必须是`.sublime-snippet`
+```
+<snippet>
+	<content><![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+Hello. ${1}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hello</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
+```
+其中`[CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+Hello. ${1}
+]]`是代码片段内容。`${1:this}`部分为tab光标输入部分，所有`${1}`会同时修改，`this`为说明标签。 `<tabTrigger>hello</tabTrigger>`为关键字，输入`hello`然后tab 就会调出内容。
