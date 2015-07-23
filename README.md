@@ -59,3 +59,13 @@ Hello. ${1}
 Hello, ${1:this} is a ${2:snippet}.
 Hello. ${1}
 ]]`是代码片段内容。`${1:this}`部分为tab光标输入部分，所有`${1}`会同时修改，`this`为说明标签。 `<tabTrigger>hello</tabTrigger>`为关键字，输入`hello`然后tab 就会调出内容。
+
+###block防止循环引用
+创建block匿名函数之前一般需要对self进行weak化，否则造成循环引用无法释放controller:
+```
+ __weak MyController *weakSelf = self 或者 __weak __typeof(self) weakSelf = self;
+ ```
+执行block方法体的时候也可以转换为强引用之后再使用：
+```
+MyController* strongSelf = weakSelf; if (!strongSelf) { return; }
+```
