@@ -2,6 +2,7 @@
 ##<a name="index"/>目录
 * [2015-07-21](#2015-07-21)
 * [2015-07-22](#2015-07-22)
+* [2015-07-23](#2015-07-23)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -38,6 +39,8 @@ import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_pac
 回车执行脚本，重启Sublime Text2后，使用cmd+shift+p调出Sublime Text2管理器UI，然后在管理器命令行上输入install，找到install Package选项，回车。
 * 第二步，输入需要安装的插件关键字，选择后回车即可
 
+<a name="2015-07-23"/>
+##2015-7-23
 ###sublime 添加代码片段
 tool->New Snippet 会弹出新添加代码片段代码，如下： 保存时后缀必须是`.sublime-snippet`
 ```
