@@ -86,9 +86,9 @@ NSLog(@"constString4[size,length] = [%zd, %zd]", sizeof(constString4),constStrin
 ```
 以上可知string.length可用来判空：如果length为零，则表示字符串对象为nil或为不包含任何字符。</br>
 
-返回值：
+NSStringCompareOptions 枚举：
 ```
-typedef enum _NSComparisonResult {
+typedef NS_OPTIONS(NSUInteger, NSStringCompareOptions) {
      NSOrderedAscending = -1,    // < 升序
      NSOrderedSame,              // = 等于
      NSOrderedDescending   // > 降序
