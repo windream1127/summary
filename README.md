@@ -87,13 +87,15 @@ NSLog(@"constString4[size,length] = [%zd, %zd]", sizeof(constString4),constStrin
 以上可知string.length可用来判空：如果length为零，则表示字符串对象为nil或为不包含任何字符。</br>
 
 返回值：
+```
 typedef enum _NSComparisonResult {
      NSOrderedAscending = -1,    // < 升序
      NSOrderedSame,              // = 等于
      NSOrderedDescending   // > 降序
-} NSComparisonResult;</br>
-
+} NSComparisonResult;
+```
 NSStringCompareOptions 枚举的值
+```
 enum{
     NSCaseInsensitiveSearch = 1,//不区分大小写比较
     NSLiteralSearch = 2,//区分大小写比较
@@ -109,3 +111,4 @@ enum{
     ,
     NSRegularExpressionSearch = 1024//只能应用于 rangeOfString:..., stringByReplacingOccurrencesOfString:...和 replaceOccurrencesOfString:... 方法。使用通用兼容的比较方法，如果设置此项，可以去掉 NSCaseInsensitiveSearch 和 NSAnchoredSearch
 }
+```
