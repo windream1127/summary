@@ -3,6 +3,7 @@
 * [2015-07-21](#2015-07-21)
 * [2015-07-22](#2015-07-22)
 * [2015-07-23](#2015-07-23)
+* [2015-07-23](#2015-07-28)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -83,4 +84,28 @@ NSLog(@"constString2[size,length] = [%zd, %zd]", sizeof(constString2),constStrin
 NSLog(@"constString3[size,length] = [%zd, %zd]", sizeof(constString3),constString3.length); // [8,13]
 NSLog(@"constString4[size,length] = [%zd, %zd]", sizeof(constString4),constString4.length); // [8,6]
 ```
-以上可知string.length可用来判空：如果length为零，则表示字符串对象为nil或为不包含任何字符。
+以上可知string.length可用来判空：如果length为零，则表示字符串对象为nil或为不包含任何字符。</br>
+
+返回值：
+typedef enum _NSComparisonResult {
+     NSOrderedAscending = -1,    // < 升序
+     NSOrderedSame,              // = 等于
+     NSOrderedDescending   // > 降序
+} NSComparisonResult;</br>
+
+NSStringCompareOptions 枚举的值
+enum{
+    NSCaseInsensitiveSearch = 1,//不区分大小写比较
+    NSLiteralSearch = 2,//区分大小写比较
+    NSBackwardsSearch = 4,//从字符串末尾开始搜索
+    NSAnchoredSearch = 8,//搜索限制范围的字符串
+    NSNumbericSearch = 64//按照字符串里的数字为依据，算出顺序。例如 Foo2.txt < Foo7.txt < Foo25.txt
+//以下定义高于 mac os 10.5 或者高于 iphone 2.0 可用
+    ,
+    NSDiacriticInsensitiveSearch = 128,//忽略 "-" 符号的比较
+    NSWidthInsensitiveSearch = 256,//忽略字符串的长度，比较出结果
+    NSForcedOrderingSearch = 512//忽略不区分大小写比较的选项，并强制返回 NSOrderedAscending 或者 NSOrderedDescending
+//以下定义高于 iphone 3.2 可用
+    ,
+    NSRegularExpressionSearch = 1024//只能应用于 rangeOfString:..., stringByReplacingOccurrencesOfString:...和 replaceOccurrencesOfString:... 方法。使用通用兼容的比较方法，如果设置此项，可以去掉 NSCaseInsensitiveSearch 和 NSAnchoredSearch
+}
