@@ -69,3 +69,18 @@ Hello. ${1}
 ```
 MyController* strongSelf = weakSelf; if (!strongSelf) { return; } 或者 __strong __typeof(weakSelf)strongSelf = weakSelf;
 ```
+
+<a name="2015-07-28"/>
+##2015-7-28
+###NSString 一些东西
+```
+NSString* constString1 = nil;
+NSString* constString2 = @"";
+NSString* constString3 = @"Hello, World!";
+NSString* constString4 = @"哈喽,世界!"; // 汉字+半角标点混合
+NSLog(@"constString1[size,length] = [%zd, %zd]", sizeof(constString1),constString1.length); // [8,0]
+NSLog(@"constString2[size,length] = [%zd, %zd]", sizeof(constString2),constString2.length); // [8,0]
+NSLog(@"constString3[size,length] = [%zd, %zd]", sizeof(constString3),constString3.length); // [8,13]
+NSLog(@"constString4[size,length] = [%zd, %zd]", sizeof(constString4),constString4.length); // [8,6]
+```
+以上可知string.length可用来判空：如果length为零，则表示字符串对象为nil或为不包含任何字符。
