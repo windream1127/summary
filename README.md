@@ -112,3 +112,10 @@ enum{
     NSRegularExpressionSearch = 1024//只能应用于 rangeOfString:..., stringByReplacingOccurrencesOfString:...和 replaceOccurrencesOfString:... 方法。使用通用兼容的比较方法，如果设置此项，可以去掉 NSCaseInsensitiveSearch 和 NSAnchoredSearch
 }
 ```
+
+<a name="2015-07-29"/>
+##2015-7-20
+###UIButton label 大小设置
+```
+button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+```
