@@ -115,7 +115,7 @@ enum{
 ```
 
 <a name="2015-07-29"/>
-##2015-7-20
+##2015-7-29
 ###UIButton label 大小设置
 ```
 button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
