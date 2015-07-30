@@ -130,3 +130,5 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 ** 分析代码逻辑问题
 ** 分析潜在内存泄露
 * leak 分析内存泄露
+###IOS socket基础  还没看，以后看
+[IOS的socket开发基础](http://my.oschina.net/u/1378445/blog/340206)
