@@ -120,3 +120,13 @@ enum{
 ```
 button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 ```
+
+<a name="2015-07-30"/>
+##2015-7-30
+###性能优化
+* 通过僵尸对象分析EXC_BAD_ACCESS 问题
+* Analyze静态分析
+** 分析变量是否未被使用
+** 分析代码逻辑问题
+** 分析潜在内存泄露
+* leak 分析内存泄露
