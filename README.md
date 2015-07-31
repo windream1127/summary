@@ -132,6 +132,7 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 ** 分析代码逻辑问题
 ** 分析潜在内存泄露
 * leak 分析内存泄露
+
 ###IOS socket基础  还没看，以后看
 [IOS的socket开发基础](http://my.oschina.net/u/1378445/blog/340206)
 
@@ -144,8 +145,10 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 [self.tableView setTableHeaderView:headerView];//修改内容代码
 [self.tableView endUpdates];
 ```
-* tableView中的几个View不全面
+* tableView中的几个View（不全面）
+
 ** TableHeaderView、tableFooterView 直接设置即可
+
 ** section的headView、footerView 通过代理设置
 ```
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height<br>
