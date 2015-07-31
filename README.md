@@ -5,6 +5,8 @@
 * [2015-07-23](#2015-07-23)
 * [2015-07-28](#2015-07-28)
 * [2015-07-29](#2015-07-29)
+* [2015-07-29](#2015-07-30)
+* [2015-07-29](#2015-07-31)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -132,3 +134,20 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 * leak 分析内存泄露
 ###IOS socket基础  还没看，以后看
 [IOS的socket开发基础](http://my.oschina.net/u/1378445/blog/340206)
+
+<a name="2015-07-31"/>
+##2015-7-31
+###tableView相关
+* 变更tableView数据的时候，可以动态的修改
+```
+[self.tableView beginUpdates];
+[self.tableView setTableHeaderView:headerView];//修改内容代码
+[self.tableView endUpdates];
+```
+* tableView中的几个View不全面
+** TableHeaderView、tableFooterView 直接设置即可
+** section的headView、footerView 通过代理设置
+```
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height<br>
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
+```
