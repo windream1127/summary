@@ -146,10 +146,8 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 [self.tableView endUpdates];
 ```
 * tableView中的几个View（不全面）
-
-** TableHeaderView、tableFooterView 直接设置即可
-
-** section的headView、footerView 通过代理设置
+	* TableHeaderView、tableFooterView 直接设置即可
+	* section的headView、footerView 通过代理设置
 ```
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height<br>
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
