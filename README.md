@@ -152,3 +152,10 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height<br>
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
 ```
+
+<a name="2015-08-05"/>
+##2015-8-05
+* [scrollToRowAtIndexPath出错原因分析](http://blog.csdn.net/yuanya/article/details/11644243)
+ 在项目中用到scrollToRowAtIndexPath，但程序一旦调用scrollToRowAtIndexPath就出错，经分析是数据源和tableview中cell不同步的原因， 比如，dataArray中有3个元素，而tableview中只显示了2个元素，当你scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:2 时当然就出错了。<br>
+
+所以调用前要确保数据源data source 和 tableview中的数据是一致的，调用scrollToRowAtIndexPath之前最后调用一下［self.dataTableView reloadData］；
