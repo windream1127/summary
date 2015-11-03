@@ -9,6 +9,7 @@
 * [2015-07-31](#2015-07-31)
 * [2015-08-05](#2015-08-05)
 * [2015-09-28](#2015-09-28)
+* [2015-11-03](#2015-11-03)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -171,3 +172,7 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
         label;
     });
 ```
+
+<a name="2015-11-03"/>
+##2015-11-03
+* [Xcode 7新的特性Lightweight Generics 轻量级泛型与__kindof修饰符](http://blog.csdn.net/leikezhu1981/article/details/47418011)
