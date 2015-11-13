@@ -182,3 +182,7 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 ##2015-11-13
 * 百度地图相关
 **问题相关 ： 无法搜索路线：在info.plist 中添加了 Bundle display name
+
+* 支付
+
+*swift
