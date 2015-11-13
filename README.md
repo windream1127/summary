@@ -10,6 +10,7 @@
 * [2015-08-05](#2015-08-05)
 * [2015-09-28](#2015-09-28)
 * [2015-11-03](#2015-11-03)
+* [2015-11-13](#2015-11-13)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -176,3 +177,8 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 <a name="2015-11-03"/>
 ##2015-11-03
 * [Xcode 7新的特性Lightweight Generics 轻量级泛型与__kindof修饰符](http://blog.csdn.net/leikezhu1981/article/details/47418011)
+
+<a name="2015-11-13"/>
+##2015-11-13
+* 百度地图相关
+**问题相关 ： 无法搜索路线：在info.plist 中添加了 Bundle display name
