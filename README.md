@@ -191,5 +191,5 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
 <a name="2015-12-07"/>
 ##2015-12-07
 * [升级Xcode7.1后的Plugin不见了](http://www.jianshu.com/p/bb7264c37ac4)
-
+* [对 Xcode 菜单选项的详细探索（干货）](http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=401444725&idx=2&sn=b0baa5a4ce3aa22d6530b193e6647add&scene=23&srcid=120750IZCjgvMfWctaib25c2#rd)
 
