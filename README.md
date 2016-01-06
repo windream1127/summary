@@ -13,6 +13,7 @@
 * [2015-11-13](#2015-11-13)
 * [2015-12-07](#2015-12-07)
 * [2015-12-07](#2015-12-17)
+* [2016-01-06](#2016-01-06)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -248,3 +249,20 @@ button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     return returnValue;
 }
 ```
+<a name="2016-01-06"/>
+##2016-01-07
+* 错误描述：
+App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app‘s Info.plist file.</br>
+在iOS9中，苹果将原http协议改成了https协议，使用 TLS1.2 SSL加密请求数据。</br>
+
+解决方法：
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+```
+参考资料:
+
+[https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_13](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_13)
