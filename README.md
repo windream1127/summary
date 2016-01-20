@@ -14,6 +14,8 @@
 * [2015-12-07](#2015-12-07)
 * [2015-12-17](#2015-12-17)
 * [2016-01-06](#2016-01-06)
+* [2016-01-19](#2016-01-19)
+* [2016-01-20](#2016-01-20)
 
 <a name="2015-07-21"/>
 ##2015-07-21
@@ -266,3 +268,26 @@ App Transport Security has blocked a cleartext HTTP (http://) resource load sinc
 参考资料:
 
 [https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_13](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_13)
+
+
+
+<a name="2016-01-19"/>
+##2016-01-19
+* swift UIControlState为struct类型：
+```
+public struct UIControlState : OptionSetType {
+    public init(rawValue: UInt)
+    
+    public static var Normal: UIControlState { get }
+    public static var Highlighted: UIControlState { get } // used when UIControl isHighlighted is set
+    public static var Disabled: UIControlState { get }
+    public static var Selected: UIControlState { get } // flag usable by app (see below)
+    @available(iOS 9.0, *)
+    public static var Focused: UIControlState { get } // Applicable only when the screen supports focus
+    public static var Application: UIControlState { get } // additional flags available for application use
+    public static var Reserved: UIControlState { get } // flags reserved for internal framework use
+}
+```
+<a name="2016-01-20"/>
+##2016-01-20
+* [自动布局](http://blog.csdn.net/pucker/article/details/49925335#comments)
